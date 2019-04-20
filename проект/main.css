@@ -1,0 +1,40 @@
+@font-face { 
+	font-family: Roboto; 
+	src: url(./pp/жж.ttf) 
+} 
+.flex-horizontal { 
+	display: flex; 
+	justify-content: center; 
+} 
+.logo { 
+	font-size: 67px; 
+	font-family: Cooper Std; 
+} 
+div.logo:hover { 
+	transform: scale(1.07); 
+} 
+.logo { 
+	transition: all 0.5s ease; 
+} 
+.gg { 
+	border: none; 
+	color: black; 
+	padding: 15px 25px; 
+	text-align: center; 
+	font-size: 16px; 
+	cursor: pointer; 
+}
+body {
+	background: 
+	url(яя.jpg)
+	fixed;
+	background-size: cover;
+}
+.contacts {
+	bottom: 0;
+	position: fixed;
+}
+audio {
+	border: none;
+	background-color: black;
+}

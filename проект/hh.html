@@ -1,0 +1,20 @@
+<!DOCTYPE HTML><html><head>
+<title>Список сотрудников</title>
+</head>
+<body>
+<h1>Список сотрудников фирмы</h1>
+<?php //начало php кода
+$host='webserver_or_localhost'; //здесь хост подключения к серверу MySQL
+$user='admin'; // имя пользователя
+$pass='pass'; // пароль пользователя
+$db_name='test'; // имя базы данных
+$link=mysql_connect($host,$user,$pass) or die("Произошла ошибка при подключении к серверу MySQL: ".mysql_error());
+mysql_select_db($db,$link) or die(mysql_error()); //выбираем базу данных
+$row=mysql_query("SELECT * FROM `lists`") or die(mysql_error());
+while($res=mysql_fetch_assoc($row))
+{
+?><div>
+<?=$row['id'];?>&nbsp;&nbsp;Фамилия: <?=$res['surname'];?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Имя: <?=$res['name'];?> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Отчество: <?=$res['otchestvo'];?>
+</div>
+<? } ?>
+</body></html>
